@@ -1,0 +1,39 @@
+<h2><b>Customer List</b></h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>UserId</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Contact Number</th>
+            <th>DOB</th>
+             <th>Address:<br>DoorNo</th>
+            <th>Street</th>
+            <th>Area</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Pincode</th>
+            <th>Actions</th> 
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let customer of customers">
+            <td>{{customer.userId}}</td>
+            <td>{{customer.name}}</td>
+            <td>{{customer.email}}</td>
+            <td>{{customer.contactNo}}</td>
+            <td>{{customer.dob}}</td>
+            <td>{{customer.address.doorNo}}</td>
+            <td>{{customer.address.street}}</td>
+            <td>{{customer.address.area}}</td>
+            <td>{{customer.address.city}}</td>
+            <td>{{customer.address.state}}</td>
+            <td>{{customer.address.pincode}}</td>
+          <td> <button (click)="updateCustomer(customer.userId)" class="btn btn-info" style="margin-right: 00px;">Update</button>
+            <button (click)="deleteCustomer(customer.userId)" class="btn btn-danger" style="margin-left:00px;">Delete </button>
+            <button (click)="customerDetails(customer.userId)" class="btn btn-primary" style="margin-left:00px;">View </button>
+        </td>
+        </tr>
+    </tbody>
+</table>

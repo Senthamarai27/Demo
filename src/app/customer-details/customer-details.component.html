@@ -1,0 +1,36 @@
+<h3><b>View Customer Details</b></h3>
+<hr/>
+<div *ngIf="customer">
+    <div>
+        <label><b>Name:</b></label>{{customer.name}}
+    </div>
+    <div>
+        <label><b>Email:</b></label>{{customer.email}}
+    </div>
+    <div>
+        <label><b>Contact Number:</b></label>{{customer.contactNo}}
+    </div>
+    <div>
+        <label><b>DOB:</b></label>{{customer.dob}}
+    </div>
+    <div>
+        <label><b>Address<br>Door Number:</b></label>{{customer.address.doorNo}}
+    </div>
+    <div>
+        <label><b>Street:</b></label>{{customer.address.street}}
+    </div>
+    <div>
+        <label><b>Area:</b></label>{{customer.address.area}}
+    </div>
+    <div>
+        <label><b>City:</b></label>{{customer.address.city}}
+    </div>
+    <div>
+        <label><b>State:</b></label>{{customer.address.state}}
+    </div>
+    <div>
+        <label><b>Pincode:</b></label>{{customer.address.pincode}}
+    </div>
+</div>
+<br><br>
+<button (click)="list()" class="btn btn-primary">Go To Customer List</button>
